@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Candidate Registration Form</title>
+    
+	<style>
+	
+/* Font */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap');
+
+/* Register Form */
+
+body {
+  background:linear-gradient(to right, #78a7ba 0%, #f3edfa 50%, #78a7ba 99%);
+}
+
+.signup-form {
+  font-family: 'JetBrains Mono', monospace;
+  width:650px;
+  margin:30px auto;
+  background:linear-gradient(to right, #ffffff 0%, #fafafa 50%, #ffffff 99%);
+  border-radius: 10px;
+}
+
+
+/* Form Header */
+
+.form-header  {
+  background-color: #6d0ac9;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.form-header h1 {
+  font-size: 30px;
+  text-align:center;
+  color:#ffffff;
+  padding:20px 0;
+  border-bottom:1px solid #cccccc;
+}
+
+/* Form Body */
+
+.form-body {
+  padding:10px 40px;
+  color:#666;
+}
+
+.form-group{
+  margin-bottom:20px;
+}
+
+.form-body .label-title {
+  color:#6d0ac9;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.form-body .form-input {
+    font-size: 17px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 34px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #333333;
+    text-align: left;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    background: white;
+    outline: none;
+}
+
+
+
+.horizontal-group .left{
+  float:left;
+  width:49%;
+}
+
+.horizontal-group .right{
+  float:right;
+  width:49%;
+}
+
+input[type="file"] {
+  outline: none;
+  cursor:pointer;
+  font-size: 17px;
+}
+
+#range-label {
+  width:15%;
+  padding:5px;
+  background-color: #6d0ac9;
+  color:white;
+  border-radius: 5px;
+  font-size: 17px;
+  position: relative;
+  top:-8px;
+}
+
+
+::-webkit-input-placeholder  {
+  color:#d9d9d9;
+}
+
+
+/* Form Footer */
+
+.signup-form .form-footer  {
+  background-color: #EFF0F1;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding:10px 40px;
+  text-align: right;
+  border-top: 1px solid #cccccc;
+  clear:both;
+}
+
+.form-footer span {
+  float:left;
+  margin-top: 10px;
+  color:#999;  
+  font-style: italic;
+  font-weight: thin;
+}
+
+.btn {
+   display:inline-block;
+   padding:10px 20px;
+   background-color: #6d0ac9;
+   font-size:17px;
+   border:none;
+   border-radius:5px;
+   color:#ffffff;
+   cursor:pointer;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  color:#6d0ac9;
+}
+
+
+
+	</style>
+	
+  </head>
+  <body>
+    <form class="signup-form" >
+
+      <!-- form header -->
+      <div class="form-header">
+        <h1>Registration Form</h1>
+      </div>
+
+      <!-- form body -->
+      <div class="form-body">
+
+        <!-- Firstname and Lastname -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="firstname" class="label-title">First name *</label>
+            <input type="text" id="firstname" class="form-input" placeholder="Enter candidate's first name" required="required" />
+          </div>
+          <div class="form-group right">
+            <label for="lastname" class="label-title">Last name *</label>
+            <input type="text" id="lastname" class="form-input" placeholder="Enter candidate's last name" />
+          </div>
+        </div>
+		
+		<div class="horizontal-group">
+          <div class="form-group left">
+            <label for="firstname" class="label-title">Father's name</label>
+            <input type="text" id="firstname" class="form-input" placeholder="Enter father's name" required="required" />
+          </div>
+          <div class="form-group right">
+            <label for="lastname" class="label-title">Mother's name</label>
+            <input type="text" id="lastname" class="form-input" placeholder="Enter your mother's name" />
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email" class="label-title">Email address *</label>
+          <input type="email" id="email" class="form-input" placeholder="Enter email address" required="required">
+        </div>
+
+        
+
+        <!-- Gender and Nationality -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label class="label-title">Gender:</label>
+            <div class="input-group">
+              <label for="male"><input type="radio" name="gender" value="male" id="male"> Male</label>
+              <label for="female"><input type="radio" name="gender" value="female" id="female"> Female</label>
+			  <label for="female"><input type="radio" name="gender" value="transgender" id="other"> Other</label>
+            </div>
+          </div>
+          <div class="form-group right">
+            <label class="label-title">Nationality</label>
+            <div >
+              <label><input type="checkbox" value="indian">Indian</label>
+              <label><input type="checkbox" value="others">Other</label>
+              
+            </div>
+          </div>
+        </div>
+
+       <!-- Category & Age-->
+        <div class="horizontal-group">
+          <div class="form-group left" >
+            <label class="label-title">Category</label>
+            <select class="form-input" id="level" >
+              <option value="B">General</option>
+              <option value="I">SC</option>
+              <option value="A">ST</option>
+			  <option value="U">OBC</option>
+            </select>
+          </div>
+          
+        </div>
+
+        
+        <div class="horizontal-group">
+          
+          <div class="form-group right">
+            <label for="experience" class="label-title">Age</label>
+            <input type="number" placeholder="Minimum required age is 18" min="18" max="35"  value="" class="form-input">
+          </div>
+        </div>
+		
+		<!-- Aadhar number & Religion -->
+		<div class="horizontal-group">
+          
+          <div class="form-group left">
+            <label for="experience" class="label-title">Aadhar Number (if any)</label>
+            <input type="text"   value="" class="form-input">
+          </div>
+        </div>
+		
+		<div class="horizontal-group">
+          <div class="form-group right" >
+            <label class="label-title">Religion</label>
+            <select class="form-input" id="level" >
+              <option value="H">Hinduism</option>
+              <option value="C">Christianism</option>
+              <option value="J">Jainism</option>
+			  <option value="S">Sikhism</option>
+			  <option value="I">Islam</option>
+			  <option value="O">Other</option>
+            </select>
+          </div>
+          
+        </div>
+
+        <!-- Address -->
+        <div class="form-group">
+		<div class="form-group left">
+          <label for="choose-file" class="label-title">Corresponding address</label>
+          <textarea class="form-input" rows="4" cols="50" style="height:auto"></textarea>
+        </div>
+      </div>
+
+      <!-- Submit btn -->
+      <div class="form-footer">
+        <span>* required</span>
+        <button type="submit" class="btn">Submit</button>
+      </div>
+
+    </form>
+
+    <!-- END CODE -->
+  </body>
+</html>
